@@ -1,17 +1,19 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [
+{ pkgs, user, ... }: {
+  environment.systemPackages = with pkgs; [
     zsh
   ];
 
-  programs.zsh = {
-    enable = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+  home-manager.users.${user} = {
+    programs.zsh = {
+      enable = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      ls = "ls -lah --color";
+      shellAliases = {
+        ls = "ls -lah --color";
+      };
+
+      history.size = 10000;
     };
-
-    history.size = 10000;
   };
 }

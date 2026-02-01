@@ -7,22 +7,25 @@ My nix-darwin (and NixOS soontm) configuration.
 ```
 nix
 ├── darwin
-│   ├── base.nix
+│   ├── base
+│   │   └── default.nix
 │   └── default.nix
 ├── hosts
 │   └── greyslab
 │       └── default.nix
 ├── modules
+│   ├── common
+│   │   └── default.nix
 │   ├── editors
 │   │   └── zed.nix
 │   └── shell
 │       ├── default.nix
+│       ├── git.nix
 │       ├── tmux.nix
-│       ├── utils.nix
 │       └── zsh.nix
 ├── flake.lock
 ├── flake.nix
 └── README.md
 
-7 directories, 11 files
+9 directories, 12 files
 ```
