@@ -42,6 +42,7 @@ in
     system = "aarch64-darwin";
     hostname = "greyslab";
     extra_modules = [
+      ./extra/docker.nix
       ../modules/editors/zed.nix
     ];
   };

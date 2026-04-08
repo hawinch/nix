@@ -1,6 +1,7 @@
 { pkgs, user, ... }: {
   environment.systemPackages = with pkgs; [
     git
+    gnupg
   ];
 
   home-manager.users.${user} = {
